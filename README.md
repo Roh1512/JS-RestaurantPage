@@ -1,0 +1,2 @@
+# JS-RestaurantPage
+Odin project 
