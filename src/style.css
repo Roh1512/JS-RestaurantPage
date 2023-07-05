@@ -1,0 +1,63 @@
+:root {
+    --bodyBG : white;
+    --bodyColor: black;
+    --topNavBG : rgb(224, 213, 198);
+    --topNavBtnBg : blue;
+    --topNavBtnColor : rgb(51, 51, 51);
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bodyBG);
+    color: var(--bodyColor);
+    padding-top: 5rem;
+    height: 100vh;
+}
+.navHead {
+    background-color: var(--topNavBG);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+}
+.navHeadBtn {
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: var(--topNavBtnBg);
+    background: none;
+    border: none;
+    color: var(--topNavBtnColor);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.navHeadBtn:hover{
+    color: rgb(163, 86, 86);
+    transform: scale3d(1.1,1.1,1.1);
+}
+.active {
+    border-bottom: 1px solid rgb(163, 86, 86);
+    transform: scale3d(1.2, 1.2, 1.2);
+    font-weight: 600;
+    color: rgb(163, 86, 86);
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--topNavBG);
+    color: rgb(31, 41, 51);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    bottom: 0;
+    flex-wrap: wrap;
+}
