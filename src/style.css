@@ -1,10 +1,11 @@
 :root {
-    --bodyBG : white;
-    --bodyColor: black;
-    --topNavBG : rgb(224, 213, 198);
-    --topNavBtnBg : blue;
-    --topNavBtnColor : rgb(51, 51, 51);
+    --bodyBG : rgb(0, 0, 0);
+    --bodyColor: rgb(246, 246, 246);
+    --topNavBG : rgb(0, 0, 0);
+    --topNavBtn : rgb(169, 255, 10);
+    --topNavBtnColor : rgb(238, 236, 236);
     font-size: 16px;
+    --heading : white;
 }
 *{
     margin: 0;
@@ -23,10 +24,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 1rem 0;
+    justify-content: flex-start;
+    padding: 0.5rem 0;
     position: fixed;
     top: 0;
+    padding: 1rem;
+    gap: 1rem;
 }
 .navHeadBtn {
     font-size: 1.1rem;
@@ -39,25 +42,137 @@ body {
     transition: all 0.4s;
 }
 .navHeadBtn:hover{
-    color: rgb(163, 86, 86);
+    color: rgb(255, 0, 123);
+    border-color: rgb(255, 0, 123);
     transform: scale3d(1.1,1.1,1.1);
 }
 .active {
-    border-bottom: 1px solid rgb(163, 86, 86);
+    border-bottom: 1px solid var(--topNavBtn);
     transform: scale3d(1.2, 1.2, 1.2);
-    font-weight: 600;
-    color: rgb(163, 86, 86);
+    font-weight: 500;
+    color: var(--topNavBtn);
 }
 
 .footer {
     width: 100%;
     background-color: var(--topNavBG);
-    color: rgb(31, 41, 51);
-    padding: 1rem;
+    color: var(--topNavBtn);
+    padding: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.2rem;
     bottom: 0;
     flex-wrap: wrap;
+}
+.footer h5{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.coverSection {
+    font-size: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heroImg {
+    max-width: 1000px;
+    width: 100%;
+    height: min-content;
+    margin: 0 auto;
+}
+
+.pageHeading {
+    text-align: center;
+    font-size: 3rem;
+    padding: 0.5rem;
+    color: var(--heading);
+}
+.heroTxt{
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    text-align: center;
+    margin: 1rem;
+}
+.foodSection{
+    width: 100%;
+    padding: 2rem;
+    min-width: fit-content;
+}
+
+.foodTypeDiv{
+    background: rgb(44, 43, 43);
+    margin-bottom: 5rem;
+    text-align: left;
+    width: 100%;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 1rem;
+    min-width: fit-content;
+}
+
+.foodCategoryHeading {
+    font-size: 3rem;
+    text-align: left;
+    color: blanchedalmond;
+    font-weight: 400;
+}
+
+.foodItems {
+    text-align: center;
+    margin: 2rem 0;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: grid;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+.foodItems h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    border-bottom: 1px solid whitesmoke;
+}
+.foodItems img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+.aboutContent{
+    padding: 1rem;
+    text-align: center;
+    display: grid;
+    gap: 3rem;
+}
+
+.aboutDiv {
+    background-color: rgb(206, 219, 159);
+    color: black;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    display: grid;
+    gap: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    min-width: 300px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.aboutDiv h1{
+    font-size: 3.5rem;
+}
+.contactDiv{
+    display: grid;
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+.contactDiv h2 {
+    color: var(--topNavBtn);
 }

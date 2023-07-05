@@ -4,8 +4,10 @@ import footer from "../footer";
 function aboutPage() {
     const content = document.createElement("div");
     content.setAttribute("id","content");
+    content.classList.add("aboutContent");
 
     const aboutDiv = document.createElement("div");
+    aboutDiv.classList.add("aboutDiv");
     const aboutHeading = document.createElement("h1");
     aboutHeading.textContent = "About us";
     const aboutText = document.createElement("p");
@@ -15,6 +17,7 @@ function aboutPage() {
 
 
     const contactDiv = document.createElement("div");
+    contactDiv.classList.add("contactDiv");
     const contactHead = document.createElement("h2");
     contactHead.textContent = "Contact Information";
 

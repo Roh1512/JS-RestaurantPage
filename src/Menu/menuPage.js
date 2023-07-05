@@ -13,25 +13,29 @@ function menuPage() {
 
     const header = document.createElement("header");
     const menuHeading = document.createElement("h1");
+    menuHeading.classList.add("pageHeading")
     menuHeading.textContent = "Menu";
     header.appendChild(menuHeading);
 
 
     //Menu section
     const section = document.createElement("section");
+    section.classList.add("foodSection")
     //beverages Section
     const beverages = document.createElement("div");
+    beverages.classList.add("foodTypeDiv");
     const bevHeading = document.createElement("h1");
     bevHeading.textContent = "Beverages";
-    beverages.appendChild(bevHeading);
+    bevHeading.classList.add("foodCategoryHeading")
+    section.appendChild(bevHeading)
 
     //PeachFizz
     const peachFizz = document.createElement("div");
+    peachFizz.classList.add("foodItems");
     const peachFizzHead = document.createElement("h3");
     peachFizzHead.textContent = "Peach Fizz";
     const peachFizzImage = new Image();
     peachFizzImage.src = PeachFizzImg;
-    peachFizzImage.setAttribute("height","300px");
 
     peachFizz.appendChild(peachFizzHead);
     peachFizz.appendChild(peachFizzImage);
@@ -40,12 +44,12 @@ function menuPage() {
 
     //Frozen apple margarita
     const frozenApple = document.createElement("div");
+    frozenApple.classList.add("foodItems");
     const frozenAppleHead = document.createElement("h3");
     frozenAppleHead.textContent = "Frozen apple margarita";
 
     const frozenAppleImg = new Image();
     frozenAppleImg.src = FrozenAppleMargerita;
-    frozenAppleImg.setAttribute("height", "300px");
 
     frozenApple.appendChild(frozenAppleHead)
     frozenApple.appendChild(frozenAppleImg)
@@ -61,28 +65,30 @@ function menuPage() {
 
     //Dishes
     const dishes = document.createElement("div");
+    dishes.classList.add("foodTypeDiv")
     const dishesHead = document.createElement("h1")
     dishesHead.textContent = "Dishes";
-    dishes.appendChild(dishesHead);
+    dishesHead.classList.add("foodCategoryHeading")
+    section.appendChild(dishesHead);
 
     //ChickenPie
     const chickenPie = document.createElement("div");
+    chickenPie.classList.add("foodItems");
     const chickenPieHead = document.createElement("h3");
     chickenPieHead.textContent = "Chicken Pie";
     const chickenPieimage = new Image();
     chickenPieimage.src = ChickenPieImg;
-    chickenPieimage.setAttribute("height","300px");
 
     chickenPie.appendChild(chickenPieHead);
     chickenPie.appendChild(chickenPieimage);
 
     //Zucchini Slice
     const zucchiniSliceDiv = document.createElement("div");
-    const zucchiniSliceHead = document.createElement("h1");
+    zucchiniSliceDiv.classList.add("foodItems");
+    const zucchiniSliceHead = document.createElement("h3");
     zucchiniSliceHead.textContent = "Zucchini Slice";
     const zucchiniSliceImage = new Image();
     zucchiniSliceImage.src = ZucchiniSliceImg;
-    zucchiniSliceImage.setAttribute("height","300px");
 
     zucchiniSliceDiv.appendChild(zucchiniSliceHead);
     zucchiniSliceDiv.appendChild(zucchiniSliceImage);
